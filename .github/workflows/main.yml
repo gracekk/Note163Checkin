@@ -10,13 +10,11 @@ on:
   repository_dispatch:
     types: [run-workflow]
   schedule:
-    - cron:  '20 8 * * *'
+    - cron:  '25 8 * * *'
 
 jobs:
   build:
-    if: github.actor == github.repository_owner
-    runs-on: ubuntu-latest
-
+  
     steps:
     - uses: actions/checkout@v2
       with:
